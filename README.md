@@ -126,12 +126,12 @@ them with the IANA. The community registration procedure is outlined in
 [RFC 6838 section 5](http://tools.ietf.org/html/rfc6838#section-5). Types
 registered with the IANA are automatically pulled into this library.
 
-[npm-version-image]: https://img.shields.io/npm/v/mime-db.svg
-[npm-downloads-image]: https://img.shields.io/npm/dm/mime-db.svg
-[npm-url]: https://npmjs.org/package/mime-db
-[travis-image]: https://img.shields.io/travis/jshttp/mime-db/master.svg
-[travis-url]: https://travis-ci.org/jshttp/mime-db
-[coveralls-image]: https://img.shields.io/coveralls/jshttp/mime-db/master.svg
-[coveralls-url]: https://coveralls.io/r/jshttp/mime-db?branch=master
-[node-image]: https://img.shields.io/node/v/mime-db.svg
+[npm-version-image]: https://img.shields.io/npm/v/mime-db2.svg
+[npm-downloads-image]: https://img.shields.io/npm/dm/mime-db2.svg
+[npm-url]: https://npmjs.org/package/mime-db2
+[travis-image]: https://img.shields.io/travis/LaughingSun/mime-db2/master.svg
+[travis-url]: https://travis-ci.org/LaughingSun/mime-db2
+[coveralls-image]: https://img.shields.io/coveralls/LaughingSun/mime-db2/master.svg
+[coveralls-url]: https://coveralls.io/r/LaughingSun/mime-db2?branch=master
+[node-image]: https://img.shields.io/node/v/mime-db2.svg
 [node-url]: http://nodejs.org/download/

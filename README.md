@@ -2,7 +2,7 @@
 
 This module is very similar to  mime-db (from which it was forked) with a slightly different schema (see the Data Structure section below) and includes command line tools.  This module also extracts data from the original mime-db module.
 
-It was formed from https://github.com/jshttp/mime-db.  Much of the source code has remaioned unchanged.  While all of this is very simple, I think much credit must be given to the many fine people on the jshttp projects for their straight foreward and useful implementation of the mimes database and build tools.
+It was grown from https://github.com/jshttp/mime-db.  Much of the source code has remained unchanged except for a few renaming of and additional keys.  While all of this is very simple, I think much credit must be given to the many fine people on the jshttp projects for their straight foreward and useful implementation of the mimes database and build tools.
 
 [![NPM Version][npm-version-image]][npm-url]
 [![NPM Downloads][npm-downloads-image]][npm-url]

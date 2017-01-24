@@ -48,9 +48,32 @@ var data = db['application/javascript'];
 
 ## Tools cli usage
 
-for an md flavored report
+for an md flavored analysis
 
 ```shell
+./mime-db2-tool analyze image.bmp
+```
+
+
+for an json flavored analysis
+
+```shell
+./mime-db2-tool analyze --json image.bmp
+```
+
+for an json flavored report on a specific file extension or mime-type
+
+```shell
+./mime-db2-tool lookup --json image.bmp
+./mime-db2-tool lookup --json -i .Bmp
+./mime-db2-tool lookup --json image/*
+./mime-db2-tool lookup --json !image/.+!
+```
+
+for an md flavored report on a specific file extension or mime-type
+
+```shell
+./mime-db2-tool lookup image.bmp
 ./mime-db2-tool lookup -i .Bmp
 ./mime-db2-tool lookup image/*
 ./mime-db2-tool lookup !image/.+!
@@ -59,9 +82,9 @@ for an md flavored report
 for a json subset of the mime-db2 (or alternative) json database
 
 ```shell
-./mime-db2-tool filter -i .Bmp
-./mime-db2-tool filter image/*
-./mime-db2-tool filter !image/.+!
+./mime-db2-tool filter --json -i .Bmp
+./mime-db2-tool filter --json image/*
+./mime-db2-tool filter --json !image/.+!
 ```
 
 to import data

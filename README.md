@@ -15,6 +15,7 @@ It consists of a single, public JSON file and does not include any logic,
 allowing it to remain as un-opinionated as possible with an API.
 It aggregates data from the following sources:
 
+- https://github.com/jshttp/mime-db/raw/master/db.json
 - http://www.iana.org/assignments/media-types/media-types.xhtml
 - http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
 - http://hg.nginx.org/nginx/raw-file/default/conf/mime.types

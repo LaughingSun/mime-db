@@ -95,14 +95,19 @@ for more information on cli usage including `-y` (auto confirm) and `-t` (test r
 The JSON file is a map lookup for lowercased mime types.
 Each mime type has the following properties:
 
-- `.source` - where the mime type is defined.
+- `.source`         - who defines the mime type.
+- `.authorities[]   - who are the authorities for the source, see authorities notes.
+- `.sourceUrl`      - the url of the source mime type file.
+- `.sourceFormat`   - the file format for the sourceUrl file
     If not set, it's probably a custom media type.
-    - `apache` - [Apache common media types](http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types)
-    - `iana` - [IANA-defined media types](http://www.iana.org/assignments/media-types/media-types.xhtml)
-    - `nginx` - [nginx media types](http://hg.nginx.org/nginx/raw-file/default/conf/mime.types)
-- `.extensions[]` - known extensions associated with this mime type.
-- `.compressible` - whether a file of this type is can be gzipped.
-- `.charset` - the default charset associated with this type, if any.
+    - `apache`      - [Apache common media types](http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types)
+    - `iana`        - [IANA-defined media types](http://www.iana.org/assignments/media-types/media-types.xhtml)
+    - `nginx`       - [nginx media types](http://hg.nginx.org/nginx/raw-file/default/conf/mime.types)
+- `.compressible`   - whether a file of this type is can be gzipped.
+- `.defaultExtension` - known extensions associated with this mime type, if any.
+- `.extensions[]`   - known extensions associated with this mime type, if any.
+- `.defaultCharset` - the default charset associated with this type, if any.
+- `.charsets[]`     - the charsets associated with this type, if any.
 
 If unknown, every property could be `undefined`.
 

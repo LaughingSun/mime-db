@@ -1,4 +1,8 @@
-# mime-db
+# mime-db2
+
+This module is a slightly different schema from mime-db and includes a few more build tools.  This module also extracts data from the original mime-db module.
+
+It was formed from https://github.com/jshttp/mime-db.  Much of the source code has remaioned unchanged.  While all of this is very simple, I think much credit must be given to the many fine people on the jshttp projects for their straight foreward and useful implementation of the mimes database and build tools.
 
 [![NPM Version][npm-version-image]][npm-url]
 [![NPM Downloads][npm-downloads-image]][npm-url]
@@ -18,7 +22,7 @@ It aggregates data from the following sources:
 ## Installation
 
 ```bash
-npm install mime-db
+npm install mime-db2
 ```
 
 ### Database Download
@@ -32,14 +36,59 @@ JSON format may change in the future.
 https://cdn.rawgit.com/jshttp/mime-db/master/db.json
 ```
 
-## Usage
+## Module usage
 
 ```js
-var db = require('mime-db');
+var db = require('mime-db2');
 
 // grab data on .js files
 var data = db['application/javascript'];
 ```
+
+## Tools cli usage
+
+for an md flavored report
+
+```shell
+./mime-db2-tool lookup -i .Bmp
+./mime-db2-tool lookup image/*
+./mime-db2-tool lookup !image/.+!
+```
+
+for a json subset of the mime-db2 (or alternative) json database
+
+```shell
+./mime-db2-tool filter -i .Bmp
+./mime-db2-tool filter image/*
+./mime-db2-tool filter !image/.+!
+```
+
+to import data
+
+```shell
+./mime-db2-tool import * http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
+./mime-db2-tool import * --source=format=apache-mime.types < mime.types
+```
+
+to export data
+
+```shell
+./mime-db2-tool export image/* --source=format=apache-mime.types > mime.types
+```
+
+to update a database
+
+```shell
+./mime-db2-tool update ./mime-db.json * http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
+./mime-db2-tool import ./mime-db.json * --source=format=apache-mime.types < mime.types
+```
+
+for more information on cli usage including `-y` (auto confirm) and `-t` (test run only, no file modification) use `mine-db2 help`.
+
+```shell
+./mime-db2-tool help
+```
+
 
 ## Data Structure
 

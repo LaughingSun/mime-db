@@ -132,6 +132,7 @@ Each mime type has the following properties:
 - `.extensions[]`   - known extensions associated with this mime type, if any.
 - `.defaultCharset` - the default charset associated with this type, if any.
 - `.charsets[]`     - the charsets associated with this type, if any.
+- `.external[]`     - associated files or urls, if any..
 
 If unknown, every property could be `undefined`.
 

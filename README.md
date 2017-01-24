@@ -51,66 +51,66 @@ var data = db['application/javascript'];
 for an md flavored analysis
 
 ```shell
-./mime-db2-tool analyze image.bmp
+./mime-db2 analyze image.bmp
 ```
 
 
 for an json flavored analysis
 
 ```shell
-./mime-db2-tool analyze --json image.bmp
+./mime-db2 analyze --json image.bmp
 ```
 
 for an json flavored report on a specific file extension or mime-type
 
 ```shell
-./mime-db2-tool lookup --json image.bmp
-./mime-db2-tool lookup --json -i .Bmp
-./mime-db2-tool lookup --json image/*
-./mime-db2-tool lookup --json !image/.+!
+./mime-db2 lookup --json image.bmp
+./mime-db2 lookup --json -i .Bmp
+./mime-db2 lookup --json image/*
+./mime-db2 lookup --json !image/.+!
 ```
 
 for an md flavored report on a specific file extension or mime-type
 
 ```shell
-./mime-db2-tool lookup image.bmp
-./mime-db2-tool lookup -i .Bmp
-./mime-db2-tool lookup image/*
-./mime-db2-tool lookup !image/.+!
+./mime-db2 lookup image.bmp
+./mime-db2 lookup -i .Bmp
+./mime-db2 lookup image/*
+./mime-db2 lookup !image/.+!
 ```
 
 for a json subset of the mime-db2 (or alternative) json database
 
 ```shell
-./mime-db2-tool filter --json -i .Bmp
-./mime-db2-tool filter --json image/*
-./mime-db2-tool filter --json !image/.+!
+./mime-db2 filter --json -i .Bmp
+./mime-db2 filter --json image/*
+./mime-db2 filter --json !image/.+!
 ```
 
 to import data
 
 ```shell
-./mime-db2-tool import * http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
-./mime-db2-tool import * --source=format=apache-mime.types < mime.types
+./mime-db2 import * http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
+./mime-db2 import * --source=format=apache-mime.types < mime.types
 ```
 
 to export data
 
 ```shell
-./mime-db2-tool export image/* --source=format=apache-mime.types > mime.types
+./mime-db2 export image/* --source=format=apache-mime.types > mime.types
 ```
 
 to update a database
 
 ```shell
-./mime-db2-tool update ./mime-db.json * http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
-./mime-db2-tool import ./mime-db.json * --source=format=apache-mime.types < mime.types
+./mime-db2 update ./mime-db.json * http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
+./mime-db2 import ./mime-db.json * --source=format=apache-mime.types < mime.types
 ```
 
 for more information on cli usage including `-y` (auto confirm) and `-t` (test run only, no file modification) use `mine-db2 help`.
 
 ```shell
-./mime-db2-tool help
+./mime-db2 help
 ```
 
 

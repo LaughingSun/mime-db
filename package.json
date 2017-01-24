@@ -3,6 +3,9 @@
   "description": "Media Type Database",
   "version": "1.0.0",
   "contributors": [
+    "Douglas Christopher Wilson <doug@somethingdoug.com>",
+    "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)",		
+    "Robert Kieffer <robert@broofa.com> (http://github.com/broofa)",
     "Ismael Harun"
   ],
   "license": "MIT",
